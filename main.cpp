@@ -10,6 +10,7 @@ void Init(container &c) ;
 void Clear(container &c);
 void In(container &c, ifstream &ifst) ;
 void Out(container &c, ofstream &ofst) ;
+void OnlyFish(container &c, ofstream &ofst);
 }
 
 using namespace simple_animals;
@@ -29,6 +30,8 @@ int main(int argc, char* argv[])
 	Init(c);
 	In(c, ifst);
     ofst << "Заполненный контейнер. " << endl;
+	OnlyFish(c, ofst);
+	ofst << "Теперь не только рыбы. " << endl;
 	Out(c, ofst);
 	Clear(c);
     ofst << "Пустой контейнер. " << endl;
