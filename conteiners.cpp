@@ -36,8 +36,31 @@ namespace simple_animals {
 
   }
   // Сигнатуры требуемых внешних функций
+  int LenghtName(animal &s) {
+	  int arrayLength = 0;
+	  for (int i = 0; s.name[i]; i++) {
+		  arrayLength++;
+	  }
+	  return arrayLength;
+  }
 
   void Out(animal &s, ofstream &ofst);
+  bool Compare(animal *first, animal *second);
+  void Sort(container &c)
+  {
+	  for (int i = 0; i < c.len - 1; i++)
+	  {
+		  for (int j = i + 1; j < c.len; j++)
+		  {
+			  if (Compare(c.cont[i], c.cont[j]))
+			  {
+				  animal *tmp = c.cont[i];
+				  c.cont[i] = c.cont[j];
+				  c.cont[j] = tmp;
+			  }
+		  }
+	  }
+  }
   // Вывод содержимого контейнера в указанный поток
   void Out(container &c, ofstream &ofst) 
   {

@@ -7,6 +7,8 @@ namespace simple_animals {
   // Сигнатуры требуемых внешних функций 
   void In(bird &r, ifstream &ist);
   void In(fish  &t, ifstream &ist);
+  int LenghtName(bird &r, char name[20]);
+  int LenghtName(fish &t, char name[20]);
 
   // Ввод параметров обобщенной фигуры из файла
   animal* In(ifstream &ifst)
@@ -40,12 +42,14 @@ namespace simple_animals {
     switch(s.k) {
     case animal::key::BIRD:
       Out(s.r, s.name,ofst);
+	  ofst << "Длина имени птицы: " << LenghtName(s.r, s.name) << endl;
       break;
     case animal::key::FISH:
       Out(s.t, s.name, ofst);
+	  ofst << "Длина имени рыбы: " << LenghtName(s.t, s.name) << endl;
       break;
     default:
-      ofst << "Incorrect figure!" << endl;
+      ofst << "Некорректно!" << endl;
     }
   }
 } // end simple_animals namespace
