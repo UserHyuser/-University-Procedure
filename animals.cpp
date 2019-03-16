@@ -20,32 +20,34 @@ namespace simple_animals {
       sp->k = animal::key::BIRD;
       In(sp->r, ifst);
 	  ifst >> sp->name;
+	  ifst >> sp->age;
       return sp;
     case 2:
       sp = new animal;
       sp->k = animal::key::FISH;
       In(sp->t, ifst);
 	  ifst >> sp->name;
+	  ifst >> sp->age;
       return sp;
     default:
       return 0;
     }
   }
 
-  void Out(bird &r, char name[20],ofstream &ofst);
-  void Out(fish  &t, char name[20],ofstream &ofst);
+  void Out(bird &r, char name[20], int age,ofstream &ofst);
+  void Out(fish  &t, char name[20],int age,ofstream &ofst);
 
   // ¬ывод параметров текущей фигуры в поток
   void Out(animal &s, ofstream &ofst) {
     switch(s.k) {
     case animal::key::BIRD:
-      Out(s.r, s.name,ofst);
+      Out(s.r, s.name,s.age,ofst);
       break;
     case animal::key::FISH:
-      Out(s.t, s.name, ofst);
+      Out(s.t, s.name,s.age, ofst);
       break;
     default:
-      ofst << "Incorrect figure!" << endl;
+      ofst << "Incorrect animal!" << endl;
     }
   }
 } // end simple_animals namespace
