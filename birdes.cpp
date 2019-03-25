@@ -21,13 +21,13 @@ namespace simple_animals
   }
 
   // Вывод параметров прямоугольника 
-  void Out(bird &r, char name[20] ,ofstream &ofst) 
+  void Out(bird &r, char name[20], int age ,ofstream &ofst) 
   {
 	  if (r.fly == 0) {
-		  ofst << "Это неперелетная птица "<< name << endl;
+		  ofst << "Это неперелетная птица "<< name << " возраст:"<< age << endl;
 	  }
 	  else {
-		  ofst << "Это перелетная птица " << name << endl;
+		  ofst << "Это перелетная птица " << name << " возраст:" << age << endl;
 	  }
   }
 } // end simple_animals namespace
