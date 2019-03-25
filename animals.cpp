@@ -8,6 +8,9 @@ namespace simple_animals {
   void In(bird &r, ifstream &ist);
   void In(fish  &t, ifstream &ist);
   void In(beast &b, ifstream &ist);
+  int LenghtName(bird &r, char name[20]);
+  int LenghtName(fish &t, char name[20]);
+  int LenghtName(beast &b, char name[20]);
 
   // Ââîä ïàðàìåòðîâ îáîáùåííîé ôèãóðû èç ôàéëà
   animal* In(ifstream &ifst)
@@ -50,12 +53,15 @@ namespace simple_animals {
     switch(s.k) {
     case animal::key::BIRD:
       Out(s.r, s.name,s.age,ofst);
+        ofst << "����� ����� �����: " << LenghtName(s.r, s.name) << endl;
       break;
     case animal::key::FISH:
       Out(s.t, s.name,s.age, ofst);
+        ofst << "����� ����� �����: " << LenghtName(s.t, s.name) << endl;
       break;
 	case animal::key::BEAST:
 		Out(s.b, s.name, ofst);
+        ofst << "����� ����� �����: " << LenghtName(s.b, s.name) << endl;
 		break;
     default:
       ofst << "Incorrect animal!" << endl;
@@ -63,5 +69,3 @@ namespace simple_animals {
     }
   }
 } // end simple_animals namespace
-
-

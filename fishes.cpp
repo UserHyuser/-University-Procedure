@@ -4,24 +4,34 @@
 using namespace std;
 
 namespace simple_animals {
-  // Ââîä ïàðàìåòðà øàðà èç ïîòîêà
+  // Ã‚Ã¢Ã®Ã¤ Ã¯Ã Ã°Ã Ã¬Ã¥Ã²Ã°Ã  Ã¸Ã Ã°Ã  Ã¨Ã§ Ã¯Ã®Ã²Ã®ÃªÃ 
   void In(fish &t, ifstream &ifst) 
   {
     ifst >> t.place;
   }
+
+  int LenghtName(fish &t, char name[20]) {
+	  int arrayLength = 0;
+	  for (int i = 0; name[i]; i++) {
+		  arrayLength++;
+	  }
+	  return arrayLength;
+  }
+
   void Out(fish &t, char name[20],int age ,ofstream &ofst)
+
   {
 	  if (t.place == 0) {
-		  ofst << "Ðûáà " <<name<< " æèâåò â îçåðå"
-			  << " âîçðàñò:" << age << endl;
+		  ofst << "ÃÃ»Ã¡Ã  " <<name<< " Ã¦Ã¨Ã¢Ã¥Ã² Ã¢ Ã®Ã§Ã¥Ã°Ã¥"
+			  << " Ã¢Ã®Ã§Ã°Ã Ã±Ã²:" << age << endl;
 	  }
 	  else if (t.place == 1) {
-		  ofst << "Ðûáà " << name << " æèâåò â ìîðå"
-			  << " âîçðàñò:" << age << endl;
+		  ofst << "ÃÃ»Ã¡Ã  " << name << " Ã¦Ã¨Ã¢Ã¥Ã² Ã¢ Ã¬Ã®Ã°Ã¥"
+			  << " Ã¢Ã®Ã§Ã°Ã Ã±Ã²:" << age << endl;
 	  }
 	  else if (t.place == 2) {
-		  ofst << "Ðûáà " << name << " æèâåò â ðåêå"
-			  << " âîçðàñò:" << age << endl;
+		  ofst << "ÃÃ»Ã¡Ã  " << name << " Ã¦Ã¨Ã¢Ã¥Ã² Ã¢ Ã°Ã¥ÃªÃ¥"
+			  << " Ã¢Ã®Ã§Ã°Ã Ã±Ã²:" << age << endl;
 	  }
   }
 } // end simple_animals namespace
