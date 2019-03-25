@@ -7,6 +7,7 @@ namespace simple_animals {
   // Сигнатуры требуемых внешних функций 
   void In(bird &r, ifstream &ist);
   void In(fish  &t, ifstream &ist);
+  void In(beast &b, ifstream &ist);
 
   // Ввод параметров обобщенной фигуры из файла
   animal* In(ifstream &ifst)
@@ -27,6 +28,12 @@ namespace simple_animals {
       In(sp->t, ifst);
 	  ifst >> sp->name;
       return sp;
+	case 3:
+		sp = new animal;
+		sp->k = animal::key::BEAST;
+		In(sp->b, ifst);
+		ifst >> sp->name;
+		return sp;
     default:
       return 0;
     }
@@ -34,6 +41,7 @@ namespace simple_animals {
 
   void Out(bird &r, char name[20],ofstream &ofst);
   void Out(fish  &t, char name[20],ofstream &ofst);
+  void Out(beast &b, char name[20], ofstream &ofst);
 
   // Вывод параметров текущей фигуры в поток
   void Out(animal &s, ofstream &ofst) {
@@ -44,8 +52,11 @@ namespace simple_animals {
     case animal::key::FISH:
       Out(s.t, s.name, ofst);
       break;
+	case animal::key::BEAST:
+		Out(s.b, s.name, ofst);
+		break;
     default:
-      ofst << "Incorrect figure!" << endl;
+      ofst << "Некорректно!" << endl;
     }
   }
 } // end simple_animals namespace
