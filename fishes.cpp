@@ -9,19 +9,19 @@ namespace simple_animals {
   {
     ifst >> t.place;
   }
-  void Out(fish &t, char name[20] ,ofstream &ofst)
+  void Out(fish &t, char name[20],int age ,ofstream &ofst)
   {
 	  if (t.place == 0) {
 		  ofst << "Рыба " <<name<< " живет в озере"
-			  << endl;
+			  << " возраст:" << age << endl;
 	  }
 	  else if (t.place == 1) {
 		  ofst << "Рыба " << name << " живет в море"
-			  << endl;
+			  << " возраст:" << age << endl;
 	  }
 	  else if (t.place == 2) {
 		  ofst << "Рыба " << name << " живет в реке"
-			  << endl;
+			  << " возраст:" << age << endl;
 	  }
   }
 } // end simple_animals namespace

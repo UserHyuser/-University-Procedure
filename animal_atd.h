@@ -11,6 +11,7 @@ namespace simple_animals {
     enum key {BIRD, FISH, BEAST};
     key k; // ключ
 	char name[20];
+	int age = 0;
     // используемые альтернативы
     union { // используем включение
       bird r;
