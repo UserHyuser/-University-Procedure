@@ -1,50 +1,43 @@
 #include <iostream>
 #include <fstream>
-#include "conteiner.h"
+#include "container_atd.h"
+#include "animal_atd.h"
+//#include "containers.cpp"
+
 
 using namespace std;
 
-namespace simple_animals {
-// Ñèãíàòóðû òðåáóåìûõ âíåøíèõ ôóíêöèé
-void Init(container &c) ;
-void Clear(container &c);
-void In(container &c, ifstream &ifst) ;
-void Out(container &c, ofstream &ofst) ;
-
-void OnlyFish(container &c, ofstream &ofst);
-
-void Sort(container &c);
-
-}
-
-using namespace simple_animals;
-
-int main(int argc, char* argv[]) 
+int main(int argc, char* argv[])
 {
-	if(argc !=3)	
+	setlocale(LC_ALL, "");
+	ifstream in;
+	in.open("in.txt");
+	if (!in.is_open())
 	{
-		cout << "incorrect command line! "
-		"Waited: command infile outfile" << endl;
-		exit(1);
+		cout << "Ошибка с файлом";
+		return -1;
 	}
-	ifstream ifst(argv[1]);
-	ofstream ofst(argv[2]);
-	cout << "Start"<< endl;
-	container c;
-	Init(c);
-	In(c, ifst);
-    ofst << "Çàïîëíåííûé êîíòåéíåð. " << endl;
-  
-	Sort(c);
-  
-	OnlyFish(c, ofst);
-	ofst << "Òåïåðü íå òîëüêî ðûáû. " << endl;
 
-  Out(c, ofst);
-	Clear(c);
-    //ofst << "Ïóñòîé êîíòåéíåð. " << endl;
-	//Out(c, ofst);
-	cout << "Stop"<< endl;
-	system ("pause");
-return 0;
+	ofstream out;
+	out.open("out.txt");
+	if (!out.is_open())
+	{
+		cout << "Ошибка с файлом";
+		return -1;
+	}
+
+	cout << "Start" << endl;
+
+	simple_animals::container* begin = new simple_animals::container;
+	begin->In(in);
+	begin->Sort();
+	begin->OnlyFish(out);
+	begin->Out(out);
+
+	cout << "Stop" << endl;
+
+	in.close();
+	out.close();
+	system("pause");
+	return 0;
 }

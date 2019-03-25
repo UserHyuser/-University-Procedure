@@ -1,10 +1,21 @@
+
+#pragma once
 #ifndef __fish_atd__
 #define __fish_atd__
+// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ animal
+#include "animal_atd.h"
 namespace simple_animals {
-  
-  struct fish {
-    int place; // где живет рыба 0 - озеро 1 - море 2 - река
-	
-  };
+	// пїЅпїЅпїЅ
+	class fish : public animal {
+		int place; // пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ 0 - пїЅпїЅпїЅпїЅпїЅ 1 - пїЅпїЅпїЅпїЅ 2 - пїЅпїЅпїЅпїЅ
+	public:
+		// пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
+		void InData(ifstream &ifst);  // пїЅпїЅпїЅпїЅ
+		void Out(ofstream &ofst);     // пїЅпїЅпїЅпїЅпїЅ 
+		int LenghtName();
+    void OnlyFish(ofstream &ofst);
+		fish() {} // пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ.
+	};
 } // end simple_animals namespace
 #endif
+
