@@ -33,8 +33,8 @@ int main(int argc, char* argv[])
 	Sort(c);
 	Out(c, ofst);
 	Clear(c);
-    ofst << "Пустой контейнер. " << endl;
-	Out(c, ofst);
+    //ofst << "Пустой контейнер. " << endl;
+	//Out(c, ofst);
 	cout << "Stop"<< endl;
 	system ("pause");
 return 0;
