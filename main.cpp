@@ -5,12 +5,16 @@
 using namespace std;
 
 namespace simple_animals {
-// Сигнатуры требуемых внешних функций
+// Г‘ГЁГЈГ­Г ГІГіГ°Г» ГІГ°ГҐГЎГіГҐГ¬Г»Гµ ГўГ­ГҐГёГ­ГЁГµ ГґГіГ­ГЄГ¶ГЁГ©
 void Init(container &c) ;
 void Clear(container &c);
 void In(container &c, ifstream &ifst) ;
 void Out(container &c, ofstream &ofst) ;
+
+void OnlyFish(container &c, ofstream &ofst);
+
 void Sort(container &c);
+
 }
 
 using namespace simple_animals;
@@ -29,11 +33,16 @@ int main(int argc, char* argv[])
 	container c;
 	Init(c);
 	In(c, ifst);
-    ofst << "Заполненный контейнер. " << endl;
+    ofst << "Г‡Г ГЇГ®Г«Г­ГҐГ­Г­Г»Г© ГЄГ®Г­ГІГҐГ©Г­ГҐГ°. " << endl;
+  
 	Sort(c);
-	Out(c, ofst);
+  
+	OnlyFish(c, ofst);
+	ofst << "Г’ГҐГЇГҐГ°Гј Г­ГҐ ГІГ®Г«ГјГЄГ® Г°Г»ГЎГ». " << endl;
+
+  Out(c, ofst);
 	Clear(c);
-    //ofst << "Пустой контейнер. " << endl;
+    //ofst << "ГЏГіГ±ГІГ®Г© ГЄГ®Г­ГІГҐГ©Г­ГҐГ°. " << endl;
 	//Out(c, ofst);
 	cout << "Stop"<< endl;
 	system ("pause");
