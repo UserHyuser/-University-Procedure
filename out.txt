@@ -24,3 +24,109 @@ Name's lenght: 6
 Name's lenght: 5
 6: Это перелетная птица Орел возраст:6
 Name's lenght: 4
+Multimethod.
+Beast and Bird.
+Это травоядный зверь Ultrabeast возраст:0
+Name's lenght: 10
+Это неперелетная птица Воробей возраст:3
+Name's lenght: 7
+Beast and beast.
+Это травоядный зверь Ultrabeast возраст:0
+Name's lenght: 10
+Это насекомоядный зверь Beast2 возраст:0
+Name's lenght: 6
+Beast and fish.
+Это травоядный зверь Ultrabeast возраст:0
+Name's lenght: 10
+Fish Плотва lives in lake:2
+Name's lenght: 6
+Beast and Bird.
+Это травоядный зверь Ultrabeast возраст:0
+Name's lenght: 10
+Это перелетная птица Siniza возраст:3
+Name's lenght: 6
+Beast and beast.
+Это травоядный зверь Ultrabeast возраст:0
+Name's lenght: 10
+Это травоядный зверь Зверь возраст:0
+Name's lenght: 5
+Beast and Bird.
+Это травоядный зверь Ultrabeast возраст:0
+Name's lenght: 10
+Это перелетная птица Орел возраст:6
+Name's lenght: 4
+Bird and beast.
+Это неперелетная птица Воробей возраст:3
+Name's lenght: 7
+Это насекомоядный зверь Beast2 возраст:0
+Name's lenght: 6
+Bird and fish.
+Это неперелетная птица Воробей возраст:3
+Name's lenght: 7
+Fish Плотва lives in lake:2
+Name's lenght: 6
+Bird and Bird.
+Это неперелетная птица Воробей возраст:3
+Name's lenght: 7
+Это перелетная птица Siniza возраст:3
+Name's lenght: 6
+Bird and beast.
+Это неперелетная птица Воробей возраст:3
+Name's lenght: 7
+Это травоядный зверь Зверь возраст:0
+Name's lenght: 5
+Bird and Bird.
+Это неперелетная птица Воробей возраст:3
+Name's lenght: 7
+Это перелетная птица Орел возраст:6
+Name's lenght: 4
+Beast and fish.
+Это насекомоядный зверь Beast2 возраст:0
+Name's lenght: 6
+Fish Плотва lives in lake:2
+Name's lenght: 6
+Beast and Bird.
+Это насекомоядный зверь Beast2 возраст:0
+Name's lenght: 6
+Это перелетная птица Siniza возраст:3
+Name's lenght: 6
+Beast and beast.
+Это насекомоядный зверь Beast2 возраст:0
+Name's lenght: 6
+Это травоядный зверь Зверь возраст:0
+Name's lenght: 5
+Beast and Bird.
+Это насекомоядный зверь Beast2 возраст:0
+Name's lenght: 6
+Это перелетная птица Орел возраст:6
+Name's lenght: 4
+Fish and bird.
+Fish Плотва lives in lake:2
+Name's lenght: 6
+Это перелетная птица Siniza возраст:3
+Name's lenght: 6
+Fish and beast.
+Fish Плотва lives in lake:2
+Name's lenght: 6
+Это травоядный зверь Зверь возраст:0
+Name's lenght: 5
+Fish and bird.
+Fish Плотва lives in lake:2
+Name's lenght: 6
+Это перелетная птица Орел возраст:6
+Name's lenght: 4
+Bird and beast.
+Это перелетная птица Siniza возраст:3
+Name's lenght: 6
+Это травоядный зверь Зверь возраст:0
+Name's lenght: 5
+Bird and Bird.
+Это перелетная птица Siniza возраст:3
+Name's lenght: 6
+Это перелетная птица Орел возраст:6
+Name's lenght: 4
+Beast and Bird.
+Это травоядный зверь Зверь возраст:0
+Name's lenght: 5
+Это перелетная птица Орел возраст:6
+Name's lenght: 4
