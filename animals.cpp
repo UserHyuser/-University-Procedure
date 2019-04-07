@@ -45,7 +45,7 @@ namespace simple_animals {
       Out(s.t, s.name, ofst);
       break;
     default:
-      ofst << "Incorrect figure!" << endl;
+      ofst << "Некорректно!" << endl;
     }
   }
 } // end simple_animals namespace

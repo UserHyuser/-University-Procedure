@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "conteiner.h"
+#include "conteiner_atd.h"
 
 using namespace std;
 
@@ -10,6 +10,7 @@ void Init(container &c) ;
 void Clear(container &c);
 void In(container &c, ifstream &ifst) ;
 void Out(container &c, ofstream &ofst) ;
+void MultiMethod(container &c, ofstream &ofst);
 }
 
 using namespace simple_animals;
@@ -30,6 +31,7 @@ int main(int argc, char* argv[])
 	In(c, ifst);
     ofst << "Заполненный контейнер. " << endl;
 	Out(c, ofst);
+	MultiMethod(c, ofst);
 	Clear(c);
     ofst << "Пустой контейнер. " << endl;
 	Out(c, ofst);
