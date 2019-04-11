@@ -1,44 +1,37 @@
+#include <fstream>
 #include "fish_atd.h"
-using namespace std;
-namespace simple_animals {
-	// Ââîä ïàðàìåòðîâ øàðà
-	void fish::InData(ifstream &ifst)
-	{
-		ifst >> place;
-		ifst >> name;
-		ifst >> age;
-	}
-} // end simple_animals namespace
 
 using namespace std;
+
 namespace simple_animals {
-	// Âûâîä ïàðàìåòðîâ 
-	void fish::Out(ofstream &ofst)
-	{
-		if (place == 0) {
-			ofst << "Fish " << name << " живет в озере"
-				<< " возраст: " << age << endl;
-		}
-		else if (place == 1) {
-			ofst << "Рыба " << name << " живет в море"
-				<< " возраст: " << age << endl;
-		}
-		else if (place == 2) {
-			ofst << "Рыба " << name << " живет в реке"
-				<< " возраст: " << age << endl;
-		}
-	}
+  // Ââîä ïàðàìåòðà øàðà èç ïîòîêà
+  void In(fish &t, ifstream &ifst) 
+  {
+    ifst >> t.place;
+  }
 
-	void fish::OnlyFish(ofstream &ofst) {
-		Out(ofst);
-	}
+  int LenghtName(fish &t, char name[20]) {
+	  int arrayLength = 0;
+	  for (int i = 0; name[i]; i++) {
+		  arrayLength++;
+	  }
+	  return arrayLength;
+  }
 
-	int fish::LenghtName() {
-		int arrayLength = 0;
-		for (int i = 0; name[i]; i++) {
-			arrayLength++;
-		}
-		return arrayLength;
-	}
+  void Out(fish &t, char name[20],int age ,ofstream &ofst)
 
+  {
+	  if (t.place == 0) {
+		  ofst << "Fish " <<name<< " lives in"
+			  << " lake:" << age << endl;
+	  }
+	  else if (t.place == 1) {
+		  ofst << "Fish " << name << " lives in"
+			  << " sea:" << age << endl;
+	  }
+	  else if (t.place == 2) {
+		  ofst << "Fish " << name << " lives in"
+			  << " river:" << age << endl;
+	  }
+  }
 } // end simple_animals namespace

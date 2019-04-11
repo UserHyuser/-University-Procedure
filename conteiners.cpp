@@ -35,7 +35,7 @@ namespace simple_animals {
     }
 
   }
-  // Сигнатуры требуемых внешних функций
+ 
   int LenghtName(animal &s) {
 	  int arrayLength = 0;
 	  for (int i = 0; s.name[i]; i++) {
@@ -44,6 +44,7 @@ namespace simple_animals {
 	  return arrayLength;
   }
 
+  //Сигнатуры используемых внешних функций
   void Out(animal &s, ofstream &ofst);
   bool Compare(animal *first, animal *second);
   void Sort(container &c)
