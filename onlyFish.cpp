@@ -16,7 +16,6 @@ namespace simple_animals {
 			else
 				ofst << endl;
 		}
-	}
-
+	}
 } // end simple_animals namespace
 
