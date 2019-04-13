@@ -38,6 +38,7 @@ namespace simple_animals {
 		sp->k = animal::key::BEAST;
 		In(sp->b, ifst);
 		ifst >> sp->name;
+		ifst >> sp->age;
 		return sp;
     default:
       return 0;

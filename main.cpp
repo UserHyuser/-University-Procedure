@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "conteiner.h"
+#include "conteiner_atd.h"
 
 using namespace std;
 
@@ -12,6 +12,7 @@ void In(container &c, ifstream &ifst) ;
 void Out(container &c, ofstream &ofst) ;
 
 void OnlyFish(container &c, ofstream &ofst);
+void MultiMethod(container &c, ofstream &ofst);
 
 void Sort(container &c);
 
@@ -45,11 +46,11 @@ int main(int argc, char* argv[])
 	//Проверка содержимого входного файла
 	int i = 0; //Номер строки, которую будем считывать
 	char* buferStr = new char; //Буфер для строки
-	int typeAnimal; //Тип шифра, с которым работаем
-	int param; //Параметр шифра, с которым работаем
-	char bufName[21]; //Исходный текст шифра, с которым работаем
-	int bufAge; //Возраст
-	int error_code = 0; //Код ошибки
+	int typeAnimal; 
+	int param; 
+	char bufName[21]; // Tmp имя
+	int bufAge; // Возраст
+	int error_code = 0; // Код ошибки
 	int bufArrayLength = 0;
 	//Цикл проверки
 	while (!ifst.eof() && (error_code == 0))
@@ -100,25 +101,32 @@ int main(int argc, char* argv[])
 			break;
 		}
 	}
+
+	if (i % 4 != 0) {
+		cout << "Not enough parametrs"<< endl;
+		system("pause");
+		return 0;
+	}
+
 	// Определение типа ошибки
 	switch (error_code) {
 	case 1:
-		cout << "Error. Wrong type. Parametr #" << i%4 << "." << endl;
+		cout << "Wrong type. Parametr #" << i%4 << "." << endl;
 		system("pause");
 		return 0;
 		break;
 	case 2:
-		cout << "Error. Wrong parameter. Parametr #" << i % 4 << "." << endl;
+		cout << "Wrong parameter. Parametr #" << i % 4 << "." << endl;
 		system("pause");
 		return 0;
 		break;
 	case 3:
-		cout << "Error. Wrong name. Parametr #" << i % 4 << "." << endl;
+		cout << "Wrong name. Parametr #" << i % 4 << "." << endl;
 		system("pause");
 		return 0;
 		break;
 	case 4:
-		cout << "Error. Wrong age. Parametr #" << i % 4 << "." << endl;
+		cout << "Wrong age. Parametr #" << i % 4 << "." << endl;
 		system("pause");
 		return 0;
 		break;
@@ -142,6 +150,7 @@ int main(int argc, char* argv[])
 	ofst << "Òåïåðü íå òîëüêî ðûáû. " << endl;
 
   Out(c, ofst);
+  //MultiMethod(c, ofst);
 	Clear(c);
     //ofst << "Ïóñòîé êîíòåéíåð. " << endl;
 	//Out(c, ofst);
