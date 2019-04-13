@@ -1,0 +1,77 @@
+Multimethod.
+Bird and fish.
+Bird Воробей is non-migratory. Age: 2
+Name's lenght: 7
+Fish Плотва lives in lake. Age: 3
+Name's lenght: 6
+Bird and beast.
+Bird Воробей is non-migratory. Age: 2
+Name's lenght: 7
+Beast Кошка is herbivorous. Age: 3
+Name's lenght: 5
+Bird and bird.
+Bird Воробей is non-migratory. Age: 2
+Name's lenght: 7
+Bird Орел is migratory. Age: 2
+Name's lenght: 4
+Bird and fish.
+Bird Воробей is non-migratory. Age: 2
+Name's lenght: 7
+Fish Щука lives in lake. Age: 2
+Name's lenght: 4
+Bird and beast.
+Bird Воробей is non-migratory. Age: 2
+Name's lenght: 7
+Beast Кот is herbivorous. Age: 3
+Name's lenght: 3
+Fish and beast.
+Fish Плотва lives in lake. Age: 3
+Name's lenght: 6
+Beast Кошка is herbivorous. Age: 3
+Name's lenght: 5
+Fish and bird.
+Fish Плотва lives in lake. Age: 3
+Name's lenght: 6
+Bird Орел is migratory. Age: 2
+Name's lenght: 4
+Fish and fish.
+Fish Плотва lives in lake. Age: 3
+Name's lenght: 6
+Fish Щука lives in lake. Age: 2
+Name's lenght: 4
+Fish and beast.
+Fish Плотва lives in lake. Age: 3
+Name's lenght: 6
+Beast Кот is herbivorous. Age: 3
+Name's lenght: 3
+Beast and bird.
+Beast Кошка is herbivorous. Age: 3
+Name's lenght: 5
+Bird Орел is migratory. Age: 2
+Name's lenght: 4
+Beast and fish.
+Beast Кошка is herbivorous. Age: 3
+Name's lenght: 5
+Fish Щука lives in lake. Age: 2
+Name's lenght: 4
+Beast and beast.
+Beast Кошка is herbivorous. Age: 3
+Name's lenght: 5
+Beast Кот is herbivorous. Age: 3
+Name's lenght: 3
+Bird and fish.
+Bird Орел is migratory. Age: 2
+Name's lenght: 4
+Fish Щука lives in lake. Age: 2
+Name's lenght: 4
+Bird and beast.
+Bird Орел is migratory. Age: 2
+Name's lenght: 4
+Beast Кот is herbivorous. Age: 3
+Name's lenght: 3
+Fish and beast.
+Fish Щука lives in lake. Age: 2
+Name's lenght: 4
+Beast Кот is herbivorous. Age: 3
+Name's lenght: 3
+

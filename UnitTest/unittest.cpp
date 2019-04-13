@@ -27,6 +27,7 @@ namespace simple_animals
 	void Out(bird &r, char name[20], int age, ofstream &ofst);
 	void Out(fish  &t, char name[20], int age, ofstream &ofst);
 	void Out(beast &b, char name[20], int age, ofstream &ofst);
+	void MultiMethod(container &c, ofstream &ofst);
 }
 
 
@@ -410,7 +411,7 @@ public:
 	}
 };
 
-TEST_CLASS(testing_Sort)
+TEST_CLASS(Test_Sort)
 {
 public:
 
@@ -443,7 +444,7 @@ public:
 	}
 };
 
-TEST_CLASS(testing_Filter)
+TEST_CLASS(Filter)
 {
 public:
 
@@ -510,5 +511,37 @@ public:
 		int actual = LenghtName(s);
 
 		Assert::AreEqual(20, actual);
+	}
+};
+
+TEST_CLASS(Multimethod)
+{
+public:
+
+	TEST_METHOD(TestMM)
+	{
+		container testing_cont;
+		Init(testing_cont);
+		ifstream test_file_in("../UnitTest/TestFiles/MM_1.txt"); // Input
+		In(testing_cont, test_file_in);
+		ofstream test_file_out("../UnitTest/TestFiles/MM_2.txt"); // Output
+		MultiMethod(testing_cont, test_file_out);
+
+		int expected = true;
+		int actual = true;
+
+		int i = 0;
+		char ch_1[20], ch_2[20];
+		FILE *file_1 = fopen("../UnitTest/TestFiles/MM_2.txt", "r");
+		FILE *file_2 = fopen("../UnitTest/TestFiles/MM_3.txt", "r"); // Standard
+		while (!feof(file_1) && !feof(file_2))
+		{
+			fgets(ch_1, 20, file_1);
+			fgets(ch_2, 20, file_2);
+			i++;
+			if (strcmp(ch_1, ch_2))
+				actual = false;
+		}
+		Assert::AreEqual(expected, actual);
 	}
 };
