@@ -5,11 +5,12 @@ using namespace std;
 
 namespace simple_animals
 {
-	// Ввод параметров прямоугольника из файла
+	// Input parameters of beast from file
 	void In(beast &b, ifstream &ifst)
 	{
 		ifst >> b.eat;
 	}
+
 	int LenghtName(beast &b, char name[20]) {
 		int arrayLength = 0;
 		for (int i = 0; name[i]; i++) {
@@ -18,17 +19,17 @@ namespace simple_animals
 		return arrayLength;
 	}
 
-	// Вывод параметров прямоугольника 
+	// Output parameters of beast to file 
 	void Out(beast &b, char name[20], int age, ofstream &ofst)
 	{
 		if (b.eat == 0) {
-			ofst << "Это хищный зверь " << name << " возраст:" << age << endl;
+			ofst << "Beast " << name << " is predator. Age: " << age << endl;
 		}
 		else if (b.eat == 1) {
-			ofst << "Это травоядный зверь " << name << " возраст:" << age << endl;
+			ofst << "Beast " << name << " is herbivorous. Age: " << age << endl;
 		}
 		else {
-			ofst << "Это насекомоядный зверь " << name << " возраст:" << age << endl;
+			ofst << "Beast " << name << " is insectivorous. Age: " << age << endl;
 		}
 	}
 } // end simple_animals namespace

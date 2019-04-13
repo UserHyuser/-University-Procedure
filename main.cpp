@@ -1,160 +1,123 @@
 #include <iostream>
 #include <fstream>
-#include "conteiner_atd.h"
+#include "container_atd.h"
 
 using namespace std;
-
-namespace simple_animals {
-// Ñèãíàòóðû òðåáóåìûõ âíåøíèõ ôóíêöèé
-void Init(container &c) ;
-void Clear(container &c);
-void In(container &c, ifstream &ifst) ;
-void Out(container &c, ofstream &ofst) ;
-
-void OnlyFish(container &c, ofstream &ofst);
-void MultiMethod(container &c, ofstream &ofst);
-
-void Sort(container &c);
-
-}
-
 using namespace simple_animals;
 
-int main(int argc, char* argv[]) 
+namespace simple_animals {
+	// Signatures of using external functions
+	void Init(container &c);
+	void Clear(container &c);
+	void In(container &c, ifstream &ifst);
+	void Out(container &c, ofstream &ofst);
+	void OnlyFish(container &c, ofstream &ofst);
+	void MultiMethod(container &c, ofstream &ofst);
+	void Sort(container &c);
+}
+
+int main(int argc, char* argv[])
 {
-	if(argc !=3)	
+	if (argc != 3)
 	{
-		cout << "incorrect command line! "
-		"Waited: command infile outfile" << endl;
-		exit(1);
+		cout << "Incorrect command line! "
+			"Waited: command infile outfile" << endl;
+		return -1;
 	}
 	ifstream ifst(argv[1]);
 	ofstream ofst(argv[2]);
-	//Начало проверок
-	//Проверка наличия файла входных данных
+
+	// Check in.txt
 	if (!ifst.is_open())
 	{
 		cout << "Error opening in.txt";
-		return -5;
+		return -1;
 	}
-	//Проверка возможности создания файла выходных данных
+	// Check out.txt
 	if (!ofst.is_open())
 	{
 		cout << "Error opening out.txt";
-		return -6;
+		return -1;
 	}
-	//Проверка содержимого входного файла
-	int i = 0; //Номер строки, которую будем считывать
-	char* buferStr = new char; //Буфер для строки
-	int typeAnimal; 
-	int param; 
-	char bufName[21]; // Tmp имя
-	int bufAge; // Возраст
-	int error_code = 0; // Код ошибки
+	// Check in.txt content
+	int i = 0; // Current string number
+	char* buferStr = new char;
+	int typeAnimal;
+	int param;
+	char bufName[21];
+	int bufAge;
+	int error_code = 0;
 	int bufArrayLength = 0;
-	//Цикл проверки
-	while (!ifst.eof() && (error_code == 0))
+
+	while (!ifst.eof())
 	{
 		switch (i % 4) {
 		case 0:
-			if (!(ifst >> typeAnimal)) // Нельзя считать число
-			{
-				if (!(ifst >> buferStr) && (i > 0) && (typeAnimal!= 0)) // Конец данных и не пустой файл - ошибки нет
-					goto noerrors;
-				else  // Пустой файл или ошибка в данных
-				{
-					error_code = 1;
-				}
-			}
-			else
-			{
-				if ((typeAnimal < 1) || (typeAnimal > 3)) // Ошибка в данных
-				{
-					error_code = 1;
-				}
-			}
 			i++;
+			if (!(ifst >> typeAnimal) || ((typeAnimal < 1) || (typeAnimal > 3))) // Error trying read integer or incorrect key
+			{
+				cout << "Error. Wrong type. Parametr #" << i << "." << endl;
+				return -1;
+			}
 			break;
 		case 1:
-			if (!(ifst >> param)) error_code = 2;	// Внезапный конец файла или не число
-			if ((typeAnimal == 1) && !((param == 1) || (param == 0))) error_code = 2; // Несоответствие параметра допустимым ключам 1, 2, 3
-			if ((typeAnimal == 2) && !((param == 0) || (param == 1) || (param == 2))) error_code = 2; // Несоответствие параметра допустимым сдвигам (неотрицательное)
-			if ((typeAnimal == 3) && !((param == 0) || (param == 1) || (param == 2))) error_code = 2; // Несоответствие параметра допустимым числам (неотрицательное)
 			i++;
+			if (!(ifst >> param)) // Error trying read integer
+			{
+				cout << "Error. Wrong parameter. Parametr #" << i << "." << endl;
+				return -1;
+			}
+			// Integer is read, but parameter is wrong
+			if (((typeAnimal == 1) && !((param == 1) || (param == 0))) ||
+				((typeAnimal == 2) && !((param == 0) || (param == 1) || (param == 2))) ||
+				((typeAnimal == 3) && !((param == 0) || (param == 1) || (param == 2))))
+			{
+				cout << "Error. Wrong parameter. Parametr #" << i << "." << endl;
+				return -1;
+			}
 			break;
 		case 2:
-			if (!(ifst >> bufName)) error_code = 3; // Внезапный конец файла 
-			
-			bufArrayLength = 0;
-			for (int i = 0; bufName[i]; i++) {
-				bufArrayLength++;
-			}
-			if (bufArrayLength > 20) error_code = 3;
 			i++;
+			if (!(ifst >> bufName)) 
+			{
+				cout << "Error. Wrong name. Parametr #" << i << "." << endl;
+				return -1;
+			}
 			break;
 		case 3:
-			if (!(ifst >> bufAge)) error_code = 4; // Внезапный конец файла 
-			if (bufAge > 200 || bufAge < 0) {
-				error_code = 4;
-			}
 			i++;
+			if (!(ifst >> bufAge) || (bufAge > 200 || bufAge < 0)) 
+			{
+				cout << "Error. Wrong age. Parametr #" << i << "." << endl;
+				return -1;
+			}
 			break;
 		}
 	}
 
 	if (i % 4 != 0) {
-		cout << "Not enough parametrs"<< endl;
-		system("pause");
-		return 0;
+		cout << "Not enough parametrs. " << endl;
+		return -1;
 	}
 
-	// Определение типа ошибки
-	switch (error_code) {
-	case 1:
-		cout << "Wrong type. Parametr #" << i%4 << "." << endl;
-		system("pause");
-		return 0;
-		break;
-	case 2:
-		cout << "Wrong parameter. Parametr #" << i % 4 << "." << endl;
-		system("pause");
-		return 0;
-		break;
-	case 3:
-		cout << "Wrong name. Parametr #" << i % 4 << "." << endl;
-		system("pause");
-		return 0;
-		break;
-	case 4:
-		cout << "Wrong age. Parametr #" << i % 4 << "." << endl;
-		system("pause");
-		return 0;
-		break;
-	}
-
-	// Проверка оконечна без ошибок
-	noerrors:;
-	// Переоткрытие файла входных данных
+	// Check is finished withot errors
+	// Reopening file
 	ifst.close();
 	ifst.open(argv[1]);
 
-	cout << "Start"<< endl;
+	cout << "Start" << endl;
 	container c;
 	Init(c);
 	In(c, ifst);
-    ofst << "Çàïîëíåííûé êîíòåéíåð. " << endl;
-  
+	ofst << "Container is filled. " << endl;
 	Sort(c);
-  
+	Out(c, ofst);
 	OnlyFish(c, ofst);
-	ofst << "Òåïåðü íå òîëüêî ðûáû. " << endl;
-
-  Out(c, ofst);
-  //MultiMethod(c, ofst);
+	MultiMethod(c, ofst);
 	Clear(c);
-    //ofst << "Ïóñòîé êîíòåéíåð. " << endl;
-	//Out(c, ofst);
-	cout << "Stop"<< endl;
-	system ("pause");
-return 0;
+	ofst << "Container is empty. " << endl;
+	Out(c, ofst);
+	cout << "Stop" << endl;
+	system("pause");
+	return 0;
 }

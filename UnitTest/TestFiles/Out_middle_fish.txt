@@ -1,0 +1,2 @@
+Fish Килька lives in lake. Age: 0
+Name's lenght: 6

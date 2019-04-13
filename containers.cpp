@@ -1,53 +1,77 @@
 #include "container_atd.h"
+#include "animal_atd.h"
+#include <fstream>
+
+using namespace std;
+
 namespace simple_animals {
-	// Èíèöèàëèçàöèÿ êîíòåéíåðà
-	container::container() : len(0) { }
-	// Î÷èñòêà êîíòåéíåðà îò ýëåìåíòîâ
-	void container::Clear() {
-		for (int i = 0; i < len; i++) {
-			delete cont[i];
+	// Container initialization
+	void Init(container &c) { c.len = 0; }
+
+	// Container cleaning (free memory)
+	void Clear(container &c) {
+		for (int i = 0; i < c.len; i++) {
+			delete c.cont[i];
 		}
-		len = 0;
+		c.len = 0;
 	}
 
-	// Ââîä ñîäåðæèìîãî êîíòåéíåðà
-	void container::In(ifstream &ifst) {
-		while (!ifst.eof()) {
-			if (((cont[len] = animal::In(ifst)) != 0) && len < 99) {
-				len++;
+	// Signatures of using external functions
+	animal *In(ifstream &ifdt);
+
+	// Input container's content from specified source
+	void In(container &c, ifstream &ifst) {
+		while (!ifst.eof())
+		{
+			if (c.len > 99)
+			{
+				break;
+			}
+			else
+			{
+				if ((c.cont[c.len] = In(ifst)) != 0)
+					c.len++;
 			}
 		}
+
 	}
 
-	// Âûâîä ñîäåðæèìîãî êîíòåéíåðà
-	void container::Out(ofstream &ofst) {
-		ofst << "Контейнер содержит " << len
-			<< " животных." << endl;
-		for (int i = 0; i < len; i++) {
-			ofst << i << ": ";
-			cont[i]->Out(ofst);
-			ofst << "Длина имени: " 
-				<< cont[i]->LenghtName() << endl;
-		}
-	}
+	// Signatures of using external functions
+	int LenghtName(animal &s);
+	void Out(animal &s, ofstream &ofst);
+	bool Compare(animal *first, animal *second);
 
-	void container::OnlyFish(ofstream &ofst) {
-		ofst << "Только рыба." << endl;
-		for (int i = 0; i < len; i++) {
-			ofst << i << ": ";
-			cont[i]->OnlyFish(ofst);
-		}
-		ofst << "Теперь не только рыба." << endl;
-	}
-	void container::Sort() {
-		for (int i = 0; i < len - 1; i++) {
-			for (int j = i + 1; j < len; j++) {
-				if (cont[i]->Compare(*cont[j])) {
-					animal *tmp = cont[i];
-					cont[i] = cont[j];
-					cont[j] = tmp;
+	// Sorting animals by LenghtName
+	void Sort(container &c)
+	{
+		for (int i = 0; i < c.len - 1; i++)
+		{
+			for (int j = i + 1; j < c.len; j++)
+			{
+				if (Compare(c.cont[i], c.cont[j]))
+				{
+					animal *tmp = c.cont[i];
+					c.cont[i] = c.cont[j];
+					c.cont[j] = tmp;
 				}
 			}
 		}
 	}
+
+	// Output container's content to specified stream
+	void Out(container &c, ofstream &ofst)
+	{
+		ofst << "Container contains " << c.len
+			<< " animals." << endl;
+		for (int i = 0; i < c.len; i++)
+		{
+			ofst << i << ": ";
+			Out(*(c.cont[i]), ofst);
+		}
+		ofst << endl;
+	}
 } // end simple_animals namespace
+
+
+
+

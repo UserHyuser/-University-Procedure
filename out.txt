@@ -1,132 +1,220 @@
-Г‡Г ГЇГ®Г«Г­ГҐГ­Г­Г»Г© ГЄГ®Г­ГІГҐГ©Г­ГҐГ°. 
-Только рыбы.
+Container is filled. 
+Container contains 9 animals.
+0: Bird Vorobey is non-migratory. Age: 3
+Name's lenght: 7
+1: Fish Seledka lives in sea. Age: 3
+Name's lenght: 7
+2: Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+3: Fish Plotva lives in lake. Age: 2
+Name's lenght: 6
+4: Bird Soika is non-migratory. Age: 4
+Name's lenght: 5
+5: Beast Vidra is herbivorous. Age: 15
+Name's lenght: 5
+6: Beast Volk is predator. Age: 10
+Name's lenght: 4
+7: Beast Lisa is insectivorous. Age: 12
+Name's lenght: 4
+8: Bird Orel is migratory. Age: 6
+Name's lenght: 4
+
+Only fishes:
 0: 
-1: 
-2: 
-3: Fish Плотва lives in lake:2
+1: Fish Seledka lives in sea. Age: 3
+Name's lenght: 7
+2: Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+3: Fish Plotva lives in lake. Age: 2
 Name's lenght: 6
 4: 
 5: 
 6: 
-Г’ГҐГЇГҐГ°Гј Г­ГҐ ГІГ®Г«ГјГЄГ® Г°Г»ГЎГ». 
-Контейнер содержит 7 животных.
-0: Это травоядный зверь Ultrabeast возраст:0
-Name's lenght: 10
-1: Это неперелетная птица Воробей возраст:3
-Name's lenght: 7
-2: Это насекомоядный зверь Beast2 возраст:0
-Name's lenght: 6
-3: Fish Плотва lives in lake:2
-Name's lenght: 6
-4: Это перелетная птица Siniza возраст:3
-Name's lenght: 6
-5: Это травоядный зверь Зверь возраст:0
-Name's lenght: 5
-6: Это перелетная птица Орел возраст:6
-Name's lenght: 4
+7: 
+8: 
+
 Multimethod.
-Beast and Bird.
-Это травоядный зверь Ultrabeast возраст:0
-Name's lenght: 10
-Это неперелетная птица Воробей возраст:3
-Name's lenght: 7
-Beast and beast.
-Это травоядный зверь Ultrabeast возраст:0
-Name's lenght: 10
-Это насекомоядный зверь Beast2 возраст:0
-Name's lenght: 6
-Beast and fish.
-Это травоядный зверь Ultrabeast возраст:0
-Name's lenght: 10
-Fish Плотва lives in lake:2
-Name's lenght: 6
-Beast and Bird.
-Это травоядный зверь Ultrabeast возраст:0
-Name's lenght: 10
-Это перелетная птица Siniza возраст:3
-Name's lenght: 6
-Beast and beast.
-Это травоядный зверь Ultrabeast возраст:0
-Name's lenght: 10
-Это травоядный зверь Зверь возраст:0
-Name's lenght: 5
-Beast and Bird.
-Это травоядный зверь Ultrabeast возраст:0
-Name's lenght: 10
-Это перелетная птица Орел возраст:6
-Name's lenght: 4
-Bird and beast.
-Это неперелетная птица Воробей возраст:3
-Name's lenght: 7
-Это насекомоядный зверь Beast2 возраст:0
-Name's lenght: 6
 Bird and fish.
-Это неперелетная птица Воробей возраст:3
+Bird Vorobey is non-migratory. Age: 3
 Name's lenght: 7
-Fish Плотва lives in lake:2
-Name's lenght: 6
-Bird and Bird.
-Это неперелетная птица Воробей возраст:3
+Fish Seledka lives in sea. Age: 3
 Name's lenght: 7
-Это перелетная птица Siniza возраст:3
+Bird and fish.
+Bird Vorobey is non-migratory. Age: 3
+Name's lenght: 7
+Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+Bird and fish.
+Bird Vorobey is non-migratory. Age: 3
+Name's lenght: 7
+Fish Plotva lives in lake. Age: 2
 Name's lenght: 6
+Bird and bird.
+Bird Vorobey is non-migratory. Age: 3
+Name's lenght: 7
+Bird Soika is non-migratory. Age: 4
+Name's lenght: 5
 Bird and beast.
-Это неперелетная птица Воробей возраст:3
+Bird Vorobey is non-migratory. Age: 3
 Name's lenght: 7
-Это травоядный зверь Зверь возраст:0
+Beast Vidra is herbivorous. Age: 15
 Name's lenght: 5
-Bird and Bird.
-Это неперелетная птица Воробей возраст:3
+Bird and beast.
+Bird Vorobey is non-migratory. Age: 3
 Name's lenght: 7
-Это перелетная птица Орел возраст:6
+Beast Volk is predator. Age: 10
 Name's lenght: 4
-Beast and fish.
-Это насекомоядный зверь Beast2 возраст:0
-Name's lenght: 6
-Fish Плотва lives in lake:2
-Name's lenght: 6
-Beast and Bird.
-Это насекомоядный зверь Beast2 возраст:0
-Name's lenght: 6
-Это перелетная птица Siniza возраст:3
-Name's lenght: 6
-Beast and beast.
-Это насекомоядный зверь Beast2 возраст:0
-Name's lenght: 6
-Это травоядный зверь Зверь возраст:0
-Name's lenght: 5
-Beast and Bird.
-Это насекомоядный зверь Beast2 возраст:0
-Name's lenght: 6
-Это перелетная птица Орел возраст:6
+Bird and beast.
+Bird Vorobey is non-migratory. Age: 3
+Name's lenght: 7
+Beast Lisa is insectivorous. Age: 12
 Name's lenght: 4
+Bird and bird.
+Bird Vorobey is non-migratory. Age: 3
+Name's lenght: 7
+Bird Orel is migratory. Age: 6
+Name's lenght: 4
+Fish and fish.
+Fish Seledka lives in sea. Age: 3
+Name's lenght: 7
+Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+Fish and fish.
+Fish Seledka lives in sea. Age: 3
+Name's lenght: 7
+Fish Plotva lives in lake. Age: 2
+Name's lenght: 6
 Fish and bird.
-Fish Плотва lives in lake:2
-Name's lenght: 6
-Это перелетная птица Siniza возраст:3
-Name's lenght: 6
+Fish Seledka lives in sea. Age: 3
+Name's lenght: 7
+Bird Soika is non-migratory. Age: 4
+Name's lenght: 5
 Fish and beast.
-Fish Плотва lives in lake:2
-Name's lenght: 6
-Это травоядный зверь Зверь возраст:0
+Fish Seledka lives in sea. Age: 3
+Name's lenght: 7
+Beast Vidra is herbivorous. Age: 15
 Name's lenght: 5
+Fish and beast.
+Fish Seledka lives in sea. Age: 3
+Name's lenght: 7
+Beast Volk is predator. Age: 10
+Name's lenght: 4
+Fish and beast.
+Fish Seledka lives in sea. Age: 3
+Name's lenght: 7
+Beast Lisa is insectivorous. Age: 12
+Name's lenght: 4
 Fish and bird.
-Fish Плотва lives in lake:2
+Fish Seledka lives in sea. Age: 3
+Name's lenght: 7
+Bird Orel is migratory. Age: 6
+Name's lenght: 4
+Fish and fish.
+Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+Fish Plotva lives in lake. Age: 2
 Name's lenght: 6
-Это перелетная птица Орел возраст:6
+Fish and bird.
+Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+Bird Soika is non-migratory. Age: 4
+Name's lenght: 5
+Fish and beast.
+Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+Beast Vidra is herbivorous. Age: 15
+Name's lenght: 5
+Fish and beast.
+Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+Beast Volk is predator. Age: 10
+Name's lenght: 4
+Fish and beast.
+Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+Beast Lisa is insectivorous. Age: 12
+Name's lenght: 4
+Fish and bird.
+Fish Shchuka lives in river. Age: 2
+Name's lenght: 7
+Bird Orel is migratory. Age: 6
+Name's lenght: 4
+Fish and bird.
+Fish Plotva lives in lake. Age: 2
+Name's lenght: 6
+Bird Soika is non-migratory. Age: 4
+Name's lenght: 5
+Fish and beast.
+Fish Plotva lives in lake. Age: 2
+Name's lenght: 6
+Beast Vidra is herbivorous. Age: 15
+Name's lenght: 5
+Fish and beast.
+Fish Plotva lives in lake. Age: 2
+Name's lenght: 6
+Beast Volk is predator. Age: 10
+Name's lenght: 4
+Fish and beast.
+Fish Plotva lives in lake. Age: 2
+Name's lenght: 6
+Beast Lisa is insectivorous. Age: 12
+Name's lenght: 4
+Fish and bird.
+Fish Plotva lives in lake. Age: 2
+Name's lenght: 6
+Bird Orel is migratory. Age: 6
 Name's lenght: 4
 Bird and beast.
-Это перелетная птица Siniza возраст:3
-Name's lenght: 6
-Это травоядный зверь Зверь возраст:0
+Bird Soika is non-migratory. Age: 4
 Name's lenght: 5
-Bird and Bird.
-Это перелетная птица Siniza возраст:3
-Name's lenght: 6
-Это перелетная птица Орел возраст:6
-Name's lenght: 4
-Beast and Bird.
-Это травоядный зверь Зверь возраст:0
+Beast Vidra is herbivorous. Age: 15
 Name's lenght: 5
-Это перелетная птица Орел возраст:6
+Bird and beast.
+Bird Soika is non-migratory. Age: 4
+Name's lenght: 5
+Beast Volk is predator. Age: 10
 Name's lenght: 4
+Bird and beast.
+Bird Soika is non-migratory. Age: 4
+Name's lenght: 5
+Beast Lisa is insectivorous. Age: 12
+Name's lenght: 4
+Bird and bird.
+Bird Soika is non-migratory. Age: 4
+Name's lenght: 5
+Bird Orel is migratory. Age: 6
+Name's lenght: 4
+Beast and beast.
+Beast Vidra is herbivorous. Age: 15
+Name's lenght: 5
+Beast Volk is predator. Age: 10
+Name's lenght: 4
+Beast and beast.
+Beast Vidra is herbivorous. Age: 15
+Name's lenght: 5
+Beast Lisa is insectivorous. Age: 12
+Name's lenght: 4
+Beast and bird.
+Beast Vidra is herbivorous. Age: 15
+Name's lenght: 5
+Bird Orel is migratory. Age: 6
+Name's lenght: 4
+Beast and beast.
+Beast Volk is predator. Age: 10
+Name's lenght: 4
+Beast Lisa is insectivorous. Age: 12
+Name's lenght: 4
+Beast and bird.
+Beast Volk is predator. Age: 10
+Name's lenght: 4
+Bird Orel is migratory. Age: 6
+Name's lenght: 4
+Beast and bird.
+Beast Lisa is insectivorous. Age: 12
+Name's lenght: 4
+Bird Orel is migratory. Age: 6
+Name's lenght: 4
+
+Container is empty. 
+Container contains 0 animals.
+

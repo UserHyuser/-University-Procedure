@@ -1,2 +1,2 @@
-Это хищный зверь Волк возраст:0
+Beast Волк is predator. Age: 0
 Name's lenght: 4

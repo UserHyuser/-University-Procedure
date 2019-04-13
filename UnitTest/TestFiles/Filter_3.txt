@@ -1,5 +1,6 @@
-Только рыбы.
+Only fishes:
 0: 
-1: Fish Плотва lives in lake:2
+1: Fish Плотва lives in lake. Age: 2
 Name's lenght: 6
 2: 
+

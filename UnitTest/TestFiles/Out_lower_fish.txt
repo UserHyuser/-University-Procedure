@@ -1,1 +1,1 @@
-Fish Пила lives in sea:3
+Fish Пила lives in sea. Age: 3

@@ -23,7 +23,7 @@
     <ProjectGuid>{E2FA9B3C-7274-4B3D-BE35-BEDCFB0A7461}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>UnitTest</RootNamespace>
-    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
     <ProjectSubType>NativeUnitTestProject</ProjectSubType>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -155,26 +155,21 @@
   <ItemGroup>
     <ClCompile Include="..\1 laba - m\animals.cpp" />
     <ClCompile Include="..\1 laba - m\beasts.cpp" />
-    <ClCompile Include="..\1 laba - m\birdes.cpp" />
-    <ClCompile Include="..\1 laba - m\conteiners.cpp" />
+    <ClCompile Include="..\1 laba - m\birds.cpp" />
+    <ClCompile Include="..\1 laba - m\containers.cpp" />
     <ClCompile Include="..\1 laba - m\fishes.cpp" />
     <ClCompile Include="..\1 laba - m\main.cpp" />
-    <ClCompile Include="..\1 laba - m\onlyFish.cpp" />
-    <ClCompile Include="..\1 laba - m\sort.cpp" />
+    <ClCompile Include="..\1 laba - m\multimethod.cpp" />
+    <ClCompile Include="..\1 laba - m\onlyFishes.cpp" />
+    <ClCompile Include="..\1 laba - m\sorting.cpp" />
     <ClCompile Include="unittest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\1 laba - m\animal_atd.h" />
     <ClInclude Include="..\1 laba - m\beast_atd.h" />
     <ClInclude Include="..\1 laba - m\bird_atd.h" />
-    <ClInclude Include="..\1 laba - m\conteiner.h" />
+    <ClInclude Include="..\1 laba - m\container_atd.h" />
     <ClInclude Include="..\1 laba - m\fish_atd.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="TestFiles\In_lower_beast.txt" />
-    <Text Include="TestFiles\In_lower_bird.txt" />
-    <Text Include="TestFiles\In_lower_fish.txt" />
-    <Text Include="TestFiles\name.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
